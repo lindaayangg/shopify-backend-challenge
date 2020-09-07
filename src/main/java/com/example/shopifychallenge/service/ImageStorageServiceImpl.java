@@ -69,11 +69,4 @@ public class ImageStorageServiceImpl implements ImageStorageService {
         FileSystemUtils.deleteRecursively(userPath);
         initUserFolder(userId);
     }
-
-    @Override
-    public void deleteAllImages() throws IOException {
-        Path path = Paths.get(base);
-        FileSystemUtils.deleteRecursively(path);
-        initBaseFolder();
-    }
 }
