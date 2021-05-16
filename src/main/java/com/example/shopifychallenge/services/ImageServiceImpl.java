@@ -27,7 +27,7 @@ public class ImageServiceImpl implements ImageService {
     private UserRepository userRepository;
 
     @Override
-    public void updateImageInventory(Image image, Long userId, ImageInventoryDto imageInventoryDto) throws ForbiddenException {
+    public Image updateImageInventory(Image image, Long userId, ImageInventoryDto imageInventoryDto) throws ForbiddenException {
         if (!image.getOwner().getId().equals(userId)) {
             throw new ForbiddenException("No permission to modify image with ID: " + image.getId() + ".");
         }
@@ -35,7 +35,7 @@ public class ImageServiceImpl implements ImageService {
         image.setDiscount(imageInventoryDto.getDiscount());
         image.setAmount(imageInventoryDto.getAmount());
 
-        imageRepository.save(image);
+        return imageRepository.save(image);
     }
 
     @Override

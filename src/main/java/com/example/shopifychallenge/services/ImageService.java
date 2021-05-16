@@ -11,7 +11,7 @@ import java.util.List;
 
 public interface ImageService {
 
-    void updateImageInventory(Image image, Long userId, ImageInventoryDto imageInventoryDto) throws ForbiddenException;
+    Image updateImageInventory(Image image, Long userId, ImageInventoryDto imageInventoryDto) throws ForbiddenException;
 
     double buyImage(Image image, int amount) throws BadRequestException;
 
