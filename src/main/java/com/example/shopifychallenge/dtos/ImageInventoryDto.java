@@ -1,11 +1,11 @@
-package com.example.shopifychallenge.dto;
+package com.example.shopifychallenge.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class ShopImageDto {
+public class ImageInventoryDto {
     private Double price;
     private Integer discount;
     private Integer amount;

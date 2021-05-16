@@ -1,7 +1,7 @@
-package com.example.shopifychallenge.repository;
+package com.example.shopifychallenge.repositories;
 
-import com.example.shopifychallenge.model.Image;
-import com.example.shopifychallenge.model.User;
+import com.example.shopifychallenge.models.Image;
+import com.example.shopifychallenge.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
