@@ -1,4 +1,4 @@
-# Shopify Backend Challenge (Winter 2021)
+# Shopify Backend Challenge (Fall 2021)
 
 ## Overview
 This Image API allows users to add, delete, sell, and buy images.
