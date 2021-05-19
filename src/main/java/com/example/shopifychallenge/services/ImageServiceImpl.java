@@ -11,6 +11,7 @@ import com.example.shopifychallenge.repositories.ImageRepository;
 import com.example.shopifychallenge.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -39,6 +40,7 @@ public class ImageServiceImpl implements ImageService {
     }
 
     @Override
+    @Transactional
     public double buyImage(Image image, int amount) throws BadRequestException {
         User owner = image.getOwner();
 
