@@ -5,7 +5,7 @@ This Image API allows users to add, delete, sell, and buy images.
 
 ## Endpoints
 
-**`GET` `/users/{userId}`** [Get the information of a User by ID](GET_USER.md)
+**`GET` `/users/{userId}`** [Get the information of a User by ID](GET_USER.md) \
 **`POST` `/users`** [Create a User](CREATE_USER.md)
 
 **`GET` `/images/{imageId}`** [Get an Image by ID](GET_IMAGE.md)\
