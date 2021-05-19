@@ -16,31 +16,26 @@ import java.util.Collections;
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<Object> handleAllExceptions(Exception ex) {
-        ErrorResponse error = new ErrorResponse("Unhandled Error", Collections.singletonList(ex.getLocalizedMessage()));
-        return new ResponseEntity(error, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(InternalErrorException.class)
     public final ResponseEntity<Object> handleAllExceptions(InternalErrorException ex) {
-        ErrorResponse error = new ErrorResponse("Internal Error", Collections.singletonList(ex.getLocalizedMessage()));
-        return new ResponseEntity(error, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(RecordNotFoundException.class)
     public final ResponseEntity<Object> handleRecordNotFoundException(RecordNotFoundException ex) {
-        ErrorResponse error = new ErrorResponse("Record Not Found", Collections.singletonList(ex.getLocalizedMessage()));
-        return new ResponseEntity(error, HttpStatus.NOT_FOUND);
+        return new ResponseEntity(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(ForbiddenException.class)
     public final ResponseEntity<Object> handleRecordNotFoundException(ForbiddenException ex) {
-        ErrorResponse error = new ErrorResponse("Forbidden", Collections.singletonList(ex.getLocalizedMessage()));
-        return new ResponseEntity(error, HttpStatus.FORBIDDEN);
+        return new ResponseEntity(ex.getMessage(), HttpStatus.FORBIDDEN);
     }
 
     @ExceptionHandler(BadRequestException.class)
     public final ResponseEntity<Object> handleBadRequestException(BadRequestException ex) {
-        ErrorResponse error = new ErrorResponse("Bad Request", Collections.singletonList(ex.getLocalizedMessage()));
-        return new ResponseEntity(error, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 }

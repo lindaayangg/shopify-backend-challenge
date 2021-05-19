@@ -7,7 +7,7 @@ Set image's information, including the price, discount, and amount in inventory.
 `/images/{imageId}`
 
 ### Method
-`POST`
+`PATCH`
 
 ### URL Parameters
 `userId = 1`

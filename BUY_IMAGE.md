@@ -4,7 +4,7 @@
 Buy an image by ID.
 
 ### Endpoint
-`/images/{imageId}/buy`
+`/buy/{imageId}`
 
 ### Method
 `POST`
